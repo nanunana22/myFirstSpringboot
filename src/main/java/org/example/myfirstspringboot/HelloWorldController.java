@@ -2,6 +2,9 @@ package org.example.myfirstspringboot;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 //Schritt 3: Verwenden Sie Pfadvariablen, um den Namen in der Nachricht anzupassen.
 //Beispiel: „/api/hello/John“ gibt „Hallo, John!“ zurück.
 
@@ -24,6 +27,7 @@ public class HelloWorldController {
     public String helloWorld(@PathVariable String name){
         return name;
     }
+
     @PostMapping
     public String text(@RequestBody String requestBody){
         System.out.println(requestBody);
